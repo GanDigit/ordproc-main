@@ -5,9 +5,9 @@ DOCKER_USER=gandigit
 DOCKER_PASSWORD=abcde
 
 ROOT_FOLDER=$(pwd)
-ROOT_FOLDER_CATALOG=$ROOT_FOLDER_CATALOG
-ROOT_FOLDER_ORDER=$ROOT_FOLDER_ORDER
-ROOT_FOLDER_WEB=$ROOT_FOLDER_WEB
+ROOT_FOLDER_CATALOG=../../catalogservice
+ROOT_FOLDER_ORDER=../../orderservice
+ROOT_FOLDER_WEB=../../ordproc-web
 
 PROXY_NODE=9.204.168.81
 ENTRY_POINT_URL=http://$(PROXY_NODE):$(shell kubectl get svc istio-ingressgateway -n istio-system -o json | jq .spec.ports[0].nodePort)
